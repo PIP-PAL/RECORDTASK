@@ -45,7 +45,7 @@ class BlogController extends Controller
 
         //upload image
         $image = $request->file('image');
-        $image->storeAs('public/blogs', $image->hashName());
+        $image->storeAs('asset/blogs', $image->hashName());
 
         $blog = Blog::create([
             'image'     => $image->hashName(),
